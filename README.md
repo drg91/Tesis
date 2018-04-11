@@ -27,19 +27,18 @@ sudo apt-get remove python-picamera
 sudo pip uninstall picamera
 ```
 
-###Uso
+### Uso
 
-First of all it is important that **init_ivport.py** should be run at every boot before starting to access camera.
+Hay que ejecutar **init_ivport.py** cada vez que bootea la placa para poder tener acceso a las camaras.
 
 ```shell
-cd ivport-v2
+cd multiplexV2
 python init_ivport.py
 ```
-
-And check whether ivport and camera are detected by raspberry pi or no with **vcgencmd get_camera**.
+Y chequear que la raspberry detecta a la placa ivport y a la camara. Ejecutando **vcgencmd get_camera**.
 
 ```shell
-root@ivport:~/ivport-v2 $ i2cdetect -y 1
+root@raspCam:~/multiplexV2 $ i2cdetect -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
 10: 10 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
