@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master",
+  "command": "/usr/bin/c++    -isystem /usr/local/include -isystem /usr/local/include/opencv   -std=c++11   -o CMakeFiles/smoothing.dir/src/smoothing.cpp.o -c /home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/smoothing.cpp",
+  "file": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/smoothing.cpp"
+},
+{
+  "directory": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master",
+  "command": "/usr/bin/c++    -isystem /usr/local/include -isystem /usr/local/include/opencv   -std=c++11   -o CMakeFiles/discrete_fourier_transform.dir/src/discrete_fourier_transform.cpp.o -c /home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/discrete_fourier_transform.cpp",
+  "file": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/discrete_fourier_transform.cpp"
+},
+{
+  "directory": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master",
+  "command": "/usr/bin/c++    -isystem /usr/local/include -isystem /usr/local/include/opencv   -std=c++11   -o CMakeFiles/morphology_2.dir/src/morphology_2.cpp.o -c /home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/morphology_2.cpp",
+  "file": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/morphology_2.cpp"
+},
+{
+  "directory": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master",
+  "command": "/usr/bin/c++    -isystem /usr/local/include -isystem /usr/local/include/opencv   -std=c++11   -o CMakeFiles/contours2.dir/src/contours2.cpp.o -c /home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/contours2.cpp",
+  "file": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/contours2.cpp"
+},
+{
+  "directory": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master",
+  "command": "/usr/bin/c++    -isystem /usr/local/include -isystem /usr/local/include/opencv   -std=c++11   -o CMakeFiles/edge.dir/src/edge.cpp.o -c /home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/edge.cpp",
+  "file": "/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/src/edge.cpp"
+}
+]

@@ -1,0 +1,7 @@
+/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/CMakeFiles/edit_cache.dir
+/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/CMakeFiles/rebuild_cache.dir
+/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/CMakeFiles/smoothing.dir
+/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/CMakeFiles/discrete_fourier_transform.dir
+/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/CMakeFiles/morphology_2.dir
+/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/CMakeFiles/contours2.dir
+/home/drg91/Documents/tesis/openCV/opencv-benchmarks-master/CMakeFiles/edge.dir
