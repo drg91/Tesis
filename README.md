@@ -35,18 +35,21 @@ Hay que ejecutar **init_ivport.py** cada vez que bootea la placa para poder tene
 cd multiplexV2
 python init_ivport.py
 ```
-Y chequear que la raspberry detecta a la placa ivport y a la camara. Ejecutando **vcgencmd get_camera**.
+Y chequear que la raspberry detecta a la placa ivport y a la camara. Ejecutando:
+```shell
+vcgencmd get_camera
+```
 
 ```shell
 root@raspCam:~/multiplexV2 $ i2cdetect -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
-10: 10 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-60: -- -- -- -- 64 -- -- -- -- -- -- -- -- -- -- -- 
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: 10 -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- 64 -- -- -- -- -- -- -- -- -- -- --
 70: 70 -- -- -- -- -- -- --
 ```
 You should get both **0x70** and **0x64** as addresses of respectively **ivport v2** and **camera module v2**.
@@ -93,7 +96,7 @@ python init_ivport.py
 Tests
 ------
 
-There is **test_ivport.py** script which is for testing. 
+There is **test_ivport.py** script which is for testing.
 ```shell
 cd ivport-v2
 python test_ivport.py
