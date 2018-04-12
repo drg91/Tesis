@@ -1,6 +1,6 @@
 # Tesis de grado FCEFyN Ing Computacion
 
-## Garbiglia, Diego Rodrigo
+                                                                                                  ## Garbiglia, Diego Rodrigo
 
 ## Software en C++ para deteccion de caras y ojos, usa OpenCV 3.3.0.
 
