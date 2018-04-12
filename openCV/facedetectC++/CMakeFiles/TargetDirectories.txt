@@ -1,0 +1,3 @@
+/home/pi/Tesis/openCV/facedetectC++/CMakeFiles/rebuild_cache.dir
+/home/pi/Tesis/openCV/facedetectC++/CMakeFiles/edit_cache.dir
+/home/pi/Tesis/openCV/facedetectC++/CMakeFiles/facedetect.dir
