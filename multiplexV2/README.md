@@ -1,127 +1,109 @@
-IVPORT V2
---------------
+# Tesis de grado FCEFyN Ing Computacion
 
-IVPORT V2 is compatible with Raspberry Pi Camera Module V2 with 8MP SONY IMX219 Sensor
+#### Garbiglia, Diego Rodrigo
 
-IVPORT and IVPORT V2 which are the first Raspberry Pi (also Raspberry Pi A,A+,B+ and Raspberry Pi 2,3 fully compatible) Camera Module multiplexer is designed to make possible connecting more than one camera module to single CSI camera port on Raspberry Pi. Multiplexing can be controlled by 3 pins for 4 camera modules, 5 pins for 8 camera modules and 9 pins for **maximum up to 16 camera modules** with using GPIO.
+### Instalacion
 
-IVPort has already been preferred by  ESA, MIT Lab, Spacetrex Lab, well known company research centers and numerous different universities.
+Primero hay que activar I2C desde raspi-config, [usar este link](http://www.raspberrypi-spy.co.uk/2014/11/enabling-the-i2c-interface-on-the-raspberry-pi)
 
-Getting Started
------------------------------------
+Y activar el modulo de la camara desde raspi-config.
 
-###Order
-
-IVPORT V2 is available at [HERE](http://www.ivmech.com/magaza/ivport-v2-p-107).
-
-### Installation
-
-First of all please enable I2C from raspi-config, [guide this link](http://www.raspberrypi-spy.co.uk/2014/11/enabling-the-i2c-interface-on-the-raspberry-pi)
-
-And enable Camera Module from raspi-config,
-
-### Cloning a Repository
+### Clonar el repositorio
 
 ```shell
-git clone https://github.com/ivmech/ivport-v2.git
+git clone https://github.com/drg91/Tesis.git
 ```
 
-### Dependency Installation
+### Instalacion de dependencias
 
 ```shell
 sudo apt-get install python-smbus
 ```
-picamera module was forked from https://github.com/waveform80/picamera and small edits for camera v2 and ivport support. It may be needed to uninstall preinstalled picamera module on device.
+Como el modulo de picamera usado en este repositorio es un fork del original https://github.com/waveform80/picamera se edito para que funcione con la version 2 de la camaras y soporte la placa multiplexadora IVport. Hay que desinstalar el picamera que viene en el Raspbian.
+
 
 ```shell
 sudo apt-get remove python-picamera
 sudo pip uninstall picamera
 ```
 
-###Usage
+### Uso
 
-First of all it is important that **init_ivport.py** should be run at every boot before starting to access camera.
+Hay que ejecutar **init_ivport.py** cada vez que bootea la placa para poder tener acceso a las camaras.
 
 ```shell
-cd ivport-v2
+cd multiplexV2
 python init_ivport.py
 ```
-
-And check whether ivport and camera are detected by raspberry pi or no with **vcgencmd get_camera**.
+Y chequear que la raspberry detecta a la placa ivport y a la camara. Ejecutando:
+```shell
+vcgencmd get_camera
+```
 
 ```shell
-root@ivport:~/ivport-v2 $ i2cdetect -y 1
+root@raspCam:~/multiplexV2 $ i2cdetect -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
-10: 10 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-60: -- -- -- -- 64 -- -- -- -- -- -- -- -- -- -- -- 
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: 10 -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- 64 -- -- -- -- -- -- -- -- -- -- --
 70: 70 -- -- -- -- -- -- --
 ```
-You should get both **0x70** and **0x64** as addresses of respectively **ivport v2** and **camera module v2**.
+Se deberia obtener **0x70** y **0x64** en las direcciones respectivamente **ivport v2** y **camera module v2**.
 
 ```shell
 root@ivport:~/ivport-v2 $ vcgencmd get_camera
 supported=1 detected=1
 ```
-**supported** and **detected** should be **1** before **test_ivport.py** script.
+**supported** y **detected** deberian ser **1** despues ejecutar **test_ivport.py** script.
 
-There is **test_ivport.py** script for **IVPORT DUAL V2**.
+Ejemplo del script **test_ivport.py** para la **IVPORT DUAL V2**.
 
 ```python
 import ivport
 # raspistill capture
 def capture(camera):
-    "This system command for raspistill capture"
+    "Se ejecutara la aplicacion raspistill de raspberry"
     cmd = "raspistill -t 10 -o still_CAM%d.jpg" % camera
     os.system(cmd)
 
-iv = ivport.IVPort(ivport.TYPE_DUAL2)
+iv = ivport.IVPort(ivport.TYPE_QUAD2)
 iv.camera_change(1)
 capture(1)
 iv.camera_change(2)
 capture(2)
+iv.camera_change(3)
+capture(3)
+iv.camera_change(4)
+capture(4)
 iv.close()
 ```
-**TYPE** and **JUMPER** settings are configured while initialize ivport.
+**TYPE** y **JUMPER** Son las configuraciones que se setean en el constructor de ivport.
+
 ```python
 ivport.IVPort(IVPORT_TYPE, IVPORT_JUMPER)
 ```
-**RESOLUTION**, **FRAMERATE** and other settings can be configured.
+**RESOLUTION**, **FRAMERATE** otras de las configuraciones que se pueden modificar.
+
 ```python
 iv = ivport.IVPort(ivport.TYPE_DUAL2)
 iv.camera_open(camera_v2=True, resolution=(640, 480), framerate=60)
 ```
-Also **init_ivport.py** should be run at every boot before starting to access camera.
+Ejecutar **init_ivport.py** .
 
 ```shell
 cd ivport-v2
 python init_ivport.py
 ```
 
-Tests
+Pruebas
 ------
 
-There is **test_ivport.py** script which is for testing. 
+Ejecutar **test_ivport.py** .
 ```shell
 cd ivport-v2
 python test_ivport.py
 ```
-
-Wiki
-------
-
-#### See wiki pages from  [here](https://github.com/ivmech/ivport/wiki).
-
-Video
--------
-
-IVPort can be used for stereo vision with stereo camera.
-
-### [Youtube video](https://www.youtube.com/watch?v=w4JZN7Y0d2o) of stereo recording with 2 camera modules
-[![IVPort Stereo Recording](https://raw.githubusercontent.com/ivmech/ivport/master/images/ivport_stereo_01.jpg)](https://www.youtube.com/watch?v=w4JZN7Y0d2o)
-
-### IVPort was [@hackaday](http://hackaday.com/2014/12/19/multiplexing-pi-cameras/).

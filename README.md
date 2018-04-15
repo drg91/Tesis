@@ -1,6 +1,6 @@
 # Tesis de grado FCEFyN Ing Computacion
 
-Garbiglia Diego Rodrigo
+#### Garbiglia, Diego Rodrigo
 
 ### Instalacion
 
