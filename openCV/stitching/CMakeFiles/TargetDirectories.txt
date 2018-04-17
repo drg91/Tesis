@@ -1,3 +1,0 @@
-/home/drg91/Repo/Tesis/openCV/stitching/CMakeFiles/rebuild_cache.dir
-/home/drg91/Repo/Tesis/openCV/stitching/CMakeFiles/edit_cache.dir
-/home/drg91/Repo/Tesis/openCV/stitching/CMakeFiles/stitching.dir
