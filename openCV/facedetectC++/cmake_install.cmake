@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/Tesis/openCV/facedetectC++
+# Install script for directory: /home/drg91/Repo/Tesis/openCV/facedetectC++
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/Tesis/openCV/facedetectC++/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/drg91/Repo/Tesis/openCV/facedetectC++/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

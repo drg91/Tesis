@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Tesis/openCV/facedetectC++/facedetect.cpp
+/home/drg91/Repo/Tesis/openCV/facedetectC++/facedetect.cpp
 opencv2/objdetect.hpp
-/home/pi/Tesis/openCV/facedetectC++/opencv2/objdetect.hpp
+/home/drg91/Repo/Tesis/openCV/facedetectC++/opencv2/objdetect.hpp
 opencv2/highgui.hpp
-/home/pi/Tesis/openCV/facedetectC++/opencv2/highgui.hpp
+/home/drg91/Repo/Tesis/openCV/facedetectC++/opencv2/highgui.hpp
 opencv2/imgproc.hpp
-/home/pi/Tesis/openCV/facedetectC++/opencv2/imgproc.hpp
+/home/drg91/Repo/Tesis/openCV/facedetectC++/opencv2/imgproc.hpp
 iostream
 -
 
@@ -1262,17 +1262,41 @@ opencv2/videostab/global_motion.hpp
 opencv2/videostab/log.hpp
 /usr/local/include/opencv2/videostab/opencv2/videostab/log.hpp
 
-/usr/local/include/opencv2/xfeatures2d.hpp
-opencv2/features2d.hpp
-/usr/local/include/opencv2/opencv2/features2d.hpp
-opencv2/xfeatures2d/nonfree.hpp
-/usr/local/include/opencv2/opencv2/xfeatures2d/nonfree.hpp
+/usr/local/include/opencv2/viz.hpp
+opencv2/viz/types.hpp
+-
+opencv2/viz/widgets.hpp
+-
+opencv2/viz/viz3d.hpp
+-
+opencv2/viz/vizcore.hpp
+-
 
-/usr/local/include/opencv2/xfeatures2d/cuda.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/xfeatures2d/opencv2/core/cuda.hpp
+/usr/local/include/opencv2/viz/types.hpp
+string
+-
+opencv2/core.hpp
+-
+opencv2/core/affine.hpp
+-
 
-/usr/local/include/opencv2/xfeatures2d/nonfree.hpp
-opencv2/features2d.hpp
-/usr/local/include/opencv2/xfeatures2d/opencv2/features2d.hpp
+/usr/local/include/opencv2/viz/viz3d.hpp
+opencv2/core.hpp
+-
+opencv2/viz/types.hpp
+-
+opencv2/viz/widgets.hpp
+-
+
+/usr/local/include/opencv2/viz/vizcore.hpp
+opencv2/viz/types.hpp
+-
+opencv2/viz/widgets.hpp
+-
+opencv2/viz/viz3d.hpp
+-
+
+/usr/local/include/opencv2/viz/widgets.hpp
+opencv2/viz/types.hpp
+-
 
