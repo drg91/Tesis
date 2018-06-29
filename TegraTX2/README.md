@@ -1,8 +1,8 @@
 # Tesis de grado FCEFyN Ing Computacion
 
 #### Garbiglia Diego Rodrigo
-
-##Habilitar Denver2 (Arm especifico de NVIDIA - 2 Cores -)
+ 
+## Habilitar Denver2 (Arm especifico de NVIDIA - 2 Cores -)
 
 ```shell
   nvidia@tegra-ubuntu:~$ ~/tegrastats
