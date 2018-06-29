@@ -95,31 +95,16 @@ total 1852
 ### Test
 
 ```shell
-source ~/.profile
-workon cv
 python
 >>> import cv2
 >>> cv2.__version__
-'3.3.0'
+'3.4.1'
 >>>
 ```
 ### Eliminar archivos source de compilacion
 
 ```shell
-rm -rf opencv-3.3.0 opencv_contrib-3.3.0
-```
-
-## NO OLVIDAR! volver al tamanio original el valor de la variable *CONF_SWAPSIZE* en el archivo _/etc/dphys-swapfile_
-
-```shell
-CONF_SWAPSIZE=100
-#CONF_SWAPSIZE=1024
-```
-Para que tome el nuevo valor hay que reiniciar el servicio de *dphys-swapfile*
-
-```shell
-sudo /etc/init.d/dphys-swapfile stop
-sudo /etc/init.d/dphys-swapfile start
+rm -rf opencv-3.4.1 opencv_contrib-3.4.1
 ```
 
 ## Listo
